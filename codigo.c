@@ -8,14 +8,14 @@ int main()
     a-7;
     ---7;
     int 
-'
     */
-   estudo de caso
     return c;
-    'sad'
-    {
-        "casda"
-    caca
-    caca
-    dsad
+    1+2;
+    's'
+    "qwerty"
+    123notanumber
+    a++
+    b--
+    == !=
+    {]
 }
