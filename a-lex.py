@@ -152,10 +152,6 @@ def ler_operador(codigo, scout, linha, coluna, tokens, esperando_valor):
         if scout + 1 < len(codigo) and codigo[scout + 1].isdigit():
             return ler_numero(codigo, scout, linha, coluna, tokens, com_sinal=True)
 
-    if char == '!':
-        tokens.append(('ERRO', char, linha, col_inicio))
-        return scout + 1, linha, coluna + 1
-
     tokens.append(('OPERADOR', char, linha, col_inicio))
     return scout + 1, linha, coluna + 1
 
@@ -222,7 +218,7 @@ def main():
     tokens = analisar_codigo(codigo)
     for i in tokens:
         if i[0] == 'ERRO':
-             print(f"ERRO '{i[1]}' na linha {i[2]}, coluna {i[3]}")
+             print(f"ERRO LEXICO '{i[1]}' na linha {i[2]}, coluna {i[3]}")
     for i in tokens:
         if i[0] != 'ERRO':
             print("{}   {}  {}  {}".format(i[0], i[1], i[2], i[3]))
